@@ -1,0 +1,48 @@
+/*
+/* All mixins for the SaarBakt website
+/*_______________________________________________________*/
+
+@mixin fa-icon($icon, $fontSize, $color) {
+    content: $icon;
+    font-family: $fontAwesome;
+	font-weight: 900;
+	font-size: $fontSize;
+	color: $color;
+}
+
+@mixin container($width: 1200px) {
+	max-width: $width + 30px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px
+}
+
+@mixin flex($basis, $grow: 0, $shrink: 1) {
+	flex-basis: $basis;
+	flex-grow: $grow;
+	flex-shrink: $shrink;
+}
+
+@mixin button() {
+	border-radius: 2.5rem;
+	padding: 1rem 3rem;
+	color: #FFF;
+	background-color: $color3;
+	text-decoration: none;
+	border: 1px solid $color3;
+	transition: all .3s ease-in-out;
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+
+	span {
+		position: relative;
+		z-index: 2;
+	}
+
+	&:hover {
+		background-color: $color1;
+	}
+}

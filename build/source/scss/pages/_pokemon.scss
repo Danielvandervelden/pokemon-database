@@ -1,0 +1,21 @@
+.pokemon-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+
+	.pokemon-tile {
+		@include flex(150px);
+		border: 1px solid #e7e7e7;
+		text-align: center;
+		padding: 1.5rem;
+		border-radius: .4rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+
+		strong {
+			display: block;
+		}
+	}
+}

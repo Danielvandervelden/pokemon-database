@@ -1,0 +1,88 @@
+<%- include('./includes/head.ejs') %>
+
+<h1>Here you can put pokemans in the database!</h1>
+
+<form action="/add-pokemon" method="POST">
+	<fieldset>
+		<h2>Basic pokemon information:</h2>
+		<div class="form-group">
+			<label for="number">Pokemon number:</label>
+			<input name="number" type="text">
+		</div>
+		<div class="form-group">
+			<label for="pokemon">Pokemon name:</label>
+			<input name="pokemon" type="text">
+		</div>
+		<div class="form-group">
+			<label for="image">Pokemon image url:</label>
+			<input name="image" type="text">
+		</div>
+		<div class="form-row">
+			<div class="form-group">
+				<label for="primary_type">Primary Pokemon type:</label>
+				<%- include('./templates/select.ejs', {name: 'primary_type', options: types}) %>
+			</div>
+			<div class="form-group">
+				<label for="secondary_type">Secondary Pokemon type:</label>
+				<%- include('./templates/select.ejs', {name: 'secondary_type', options: types}) %>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="ability">Pokemon ability(ies):</label>
+			<input name="ability" type="text">
+		</div>
+		<div class="form-group">
+			<label for="description">Pokemon description:</label>
+			<textarea name="description"></textarea>
+		</div>
+	</fieldset>
+	<fieldset>
+		<h2>Pokemon base statistics:</h2>
+		<div class="form-row">
+			<div class="form-group">
+				<label for="base_hp">Base hp:</label>
+				<input name="base_hp" type="number">
+			</div>
+			<div class="form-group">
+				<label for="base_att">Base attack:</label>
+				<input name="base_att" type="number">
+			</div>
+			<div class="form-group">
+				<label for="base_def">Base defense:</label>
+				<input name="base_def" type="number">
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="form-group">
+				<label for="base_spe">Base speed:</label>
+				<input name="base_spe" type="number">
+			</div>
+			<div class="form-group">
+				<label for="base_spd">Base special defense:</label>
+				<input name="base_spd" type="number">
+			</div>
+			<div class="form-group">
+				<label for="base_spa">Base special attack:</label>
+				<input name="base_spa" type="number">
+			</div>
+		</div>
+	</fieldset>
+	<fieldset>
+		<h2>Pokemon misc information:</h2>
+		<div class="form-row">
+			<div class="form-group">
+				<label for="egg_group_1">First egg group:</label>
+				<%- include('./templates/select.ejs', {name: "first_egg_group", options: eggGroups}) %>
+			</div>
+			<div class="form-group">
+				<label for="egg_group_2">Second egg group:</label>
+				<%- include('./templates/select.ejs', {name: "second_egg_group", options: eggGroups}) %>
+			</div>
+		</div>
+	</fieldset>
+	<div class="button-wrapper">
+		<button class="btn" type="submit">Add pokemon to the database!</button>
+	</div>
+</form>
+
+<%- include('./includes/foot.ejs') %>

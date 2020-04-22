@@ -1,0 +1,284 @@
+/*
+/* Global Styles mobile first
+/*_______________________________________________________*/
+
+/**
+ * Standard definitions for the entire website
+**/
+html {
+	font-size: 62.5%;
+	color: #242424;
+	overflow-x: hidden;
+	box-sizing: border-box;
+}
+
+.no-scroll {
+	overflow: hidden;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	padding: 2rem 1.5rem;
+	font-size: 1.6rem;
+	font-family: $main_font_family;
+	color: $color2;
+	background-color: $color5;
+	line-height: 2.4rem;
+
+	@media screen and (max-width: $break_tablet) {
+		font-size: 1.4rem;
+	}
+
+	&:after {
+		content: '';
+		opacity: 0;
+		pointer-events: none;
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(0, 0, 0, .7);
+		position: fixed;
+		top: 0;
+		left: 0;
+		transition: all .3s ease-in-out;
+	}
+
+	&.backdrop {
+		overflow: hidden;
+
+		&:after {
+			opacity: 1;
+			pointer-events: auto;
+		}
+	}
+}
+
+a,
+a:visited {
+	color: $color1;
+	text-decoration: underline;
+	transition: all .3s ease-in-out;
+}
+
+a:active,
+a:focus,
+a:hover {
+	color: $color3;
+}
+
+iframe.lightwidget-widget {
+	height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $alt_font_family;
+	font-weight: 700;
+	margin: 0 0 1.5rem;
+	color: $color1;
+	text-align: center;
+
+	&.sb-page-title {
+		font-family: $alt_font_family;
+		font-size: 3rem;
+		margin-bottom: 3rem;
+
+		&:after {
+			content: '';
+			display: inline-block;
+			margin-left: 1rem;
+			height: 2rem;
+			min-width: 2rem;
+			background-image: url('/wp-content/themes/saarbakt-2019/assets/images/heart.svg');
+			background-size: cover;
+		}
+
+		@media screen and (min-width: $break_tablet) {
+			font-size: 5rem;
+
+			&:after {
+				height: 4rem;
+				width: 4rem;
+			}
+		}
+	}
+}
+
+h1 {
+	font-size: 4.6rem;
+	line-height: 5.2rem;
+
+	@media screen and (max-width: $break_tablet) {
+		font-size: 3rem;
+		line-height: 3.6rem;
+	}
+}
+
+h2 {
+	font-size: 4rem;
+	line-height: 4.6rem;
+
+	@media screen and (max-width: $break_tablet) {
+		font-size: 2.4rem;
+		line-height: 3rem;
+	}
+}
+
+h3 {
+	font-size: 3.4rem;
+	line-height: 4rem;
+
+	@media screen and (max-width: $break_tablet) {
+		font-size: 2rem;
+		line-height: 2.6rem;
+	}
+}
+
+h4 {
+	font-size: 2.8rem;
+	line-height: 3.4rem;
+
+	@media screen and (max-width: $break_tablet) {
+		font-size: 1.8rem;
+		line-height: 2.4rem;
+	}
+}
+
+h5 {
+	font-size: 2.2rem;
+	line-height: 2.8rem;
+
+	@media screen and (max-width: $break_tablet) {
+		font-size: 1.6rem;
+		line-height: 2.2rem;
+	}
+}
+
+h6 {
+	font-size: 1.8rem;
+	line-height: 2.4rem;
+
+	@media screen and (max-width: $break_tablet) {
+		font-size: 1.4rem;
+		line-height: 2rem;
+	}
+}
+
+/**
+ * Sections and containers
+ */
+section {
+	margin: 3rem 0;
+
+	&:first-of-type {
+		margin-top: 3rem;
+	}
+
+	@media screen and (min-width: $break_tablet) {
+		margin: 6rem 0;
+	}
+}
+
+/*
+/* Images
+/*_______________________________________________________*/
+img {
+	border-radius: 1rem;
+	transition: all .3s ease-in-out;
+	max-width: 100%;
+	height: auto;
+}
+
+/*
+/* Form elements
+/*_______________________________________________________*/
+form {
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+fieldset {
+	display: block;
+	
+	+fieldset {
+		margin-top: 3rem;
+	}
+
+	&:last-of-type {
+		margin-bottom: 2rem;
+	}
+}
+
+select {
+	appearance: none;
+	background-image: url('/images/arrow-down.png');
+	background-repeat: no-repeat;
+	background-size: 10px;
+	background-position: center right 10px;
+	padding: 0rem 3rem 0rem 1rem;
+	width: 100%;
+}
+
+label {
+	display: block;
+}
+
+.form-row {
+	display: flex;
+	justify-content: space-evenly;
+
+	.form-group + .form-group {
+		margin-left: 2rem;
+	}
+}
+
+.form-group {
+	margin-bottom: 2rem;
+}
+
+input,
+textarea {
+	width: 100%;
+	padding: 0.5rem 1rem;
+}
+
+input,
+textarea,
+select {
+	min-height: 4rem;
+	border-radius: .4rem;
+	border: 1px solid $color3;
+	box-shadow: none;
+	box-sizing: border-box; 
+	font-size: 1.6rem; 
+	outline-color: $color3;
+}
+
+textarea {
+	min-height: 200px;
+}
+
+div.wpforms-container-full .wpforms-form button[type=submit] {
+	@include button();
+}
+
+/*
+/* Tablet Styles (minimum of 768px)
+/*_______________________________________________________*/
+@media screen and (min-width: 768px) {
+	section {
+		&:first-of-type {
+			margin-top: 5rem;
+		}
+	}
+}
+
+/*
+/* Desktop Styles (minimum 1024px)
+/*_______________________________________________________*/
+@media screen and (min-width: 1024px) {
+
+}

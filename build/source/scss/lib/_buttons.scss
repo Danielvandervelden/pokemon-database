@@ -1,0 +1,26 @@
+.btn {
+	border-radius: 2.5rem;
+	padding: 1rem 3rem;
+	color: #FFF;
+	background-color: $color3;
+	text-decoration: none;
+	border: 1px solid $color3;
+	transition: all .3s ease-in-out;
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+
+	&:hover {
+		background-color: darken($color3, 10%);
+	}
+
+	span {
+		position: relative;
+		z-index: 2;
+	}
+}
+
+.button-wrapper {
+	text-align: right;
+}
