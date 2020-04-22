@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -25,5 +27,5 @@ sequelize.sync(
 	app.listen(3000);
 })
 .catch(err => {
-	console.log(error);
+	console.log(err);
 })
