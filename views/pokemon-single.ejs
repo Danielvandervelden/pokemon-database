@@ -1,15 +1,25 @@
 <%- include('./includes/head.ejs', { bodyClass: "single-pokemon" }) %>
 
-<div class="title-wrapper">
+<div class="single-pokemon__title-wrapper">
+	<div class="single-pokemon__pokemon-images">
+		<figure><img src="<%= pokemon.image %>" alt="<%= pokemon.pokemon %> regular sprite"><span>Regular</span></figure>
+		<figure><img src="<%= pokemon.image_shiny %>" alt="<%= pokemon.pokemon %> shiny sprite"><span>Shiny</span></figure>
+	</div>
+	<div class="single-pokemon__types">
+		<span class="type <%= pokemon.primary_type.toLowerCase() %>"><%= pokemon.primary_type %></span>
+		<% if(pokemon.secondary_type) { %>
+			<span class="type <%= pokemon.secondary_type.toLowerCase() %>"><%= pokemon.secondary_type %></span>
+		<% } %>
+	</div>
 	<h1><%= pokemon.pokemon %></h1>
-	<div class="actions">
+	<div class="single-pokemon__actions">
 		<a href="/edit-pokemon?id=<%= pokemon.number %>" class="btn">Edit pokemon</a>
 
 		<form action="/delete-pokemon" method="POST">
 			<button type="submit" class="btn">Delete pokemon</button>
 			<input name="pokemon" type="hidden" value="<%= pokemon.number %>">
 		</form>
-	</div>
+	</div> 	
 </div>
 
 

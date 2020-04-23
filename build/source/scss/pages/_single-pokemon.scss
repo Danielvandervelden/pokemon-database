@@ -2,18 +2,42 @@
 /* Desktop Styles
 /*_______________________________________________________*/
 .single-pokemon {
-	.title-wrapper {
-		.actions {
-			max-width: 500px;
-			margin: 0 auto;
-			display: flex;
-			justify-content: center;
 
-			form {
-				+ form {
-					margin-left: 2rem;
-				}
+	&__pokemon-images {
+		max-width: 500px;
+		width: 100%;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+
+		figure {
+			margin: 0;
+
+			+ figure {
+				margin-left: 10%;
 			}
+
+			span {
+				display: block;
+			}
+		}
+	}
+
+	&__types {
+		text-align: center;
+		margin: 1rem 0;
+	}
+
+	&__actions {
+		max-width: 500px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+
+		form {
+			margin-left: 2rem;
 		}
 	}
 }

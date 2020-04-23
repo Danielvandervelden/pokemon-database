@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("var poop = 'aids';\nconsole.log(poop);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9idWlsZC9zb3VyY2UvanMvbWFpbi5qcy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL2J1aWxkL3NvdXJjZS9qcy9tYWluLmpzPzcxMDkiXSwic291cmNlc0NvbnRlbnQiOlsibGV0IHBvb3AgPSAnYWlkcyc7XG5cbmNvbnNvbGUubG9nKHBvb3ApOyJdLCJtYXBwaW5ncyI6IkFBQUE7QUFFQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./build/source/js/main.js\n");
+eval("//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9idWlsZC9zb3VyY2UvanMvbWFpbi5qcy5qcyIsInNvdXJjZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./build/source/js/main.js\n");
 
 /***/ })
 
