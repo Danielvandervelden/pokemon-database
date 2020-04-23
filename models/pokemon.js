@@ -16,6 +16,10 @@ const Pokemon = sequelize.define('Pokemon', {
 		type: DataTypes.STRING,
 		allowNull: false
 	},
+	image_shiny: {
+		type: DataTypes.STRING,
+		allowNull: true
+	},
 	primary_type: {
 		type: DataTypes.STRING,
 		allowNull: false

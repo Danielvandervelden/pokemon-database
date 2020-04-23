@@ -1,0 +1,33 @@
+/*
+/* Desktop Styles
+/*_______________________________________________________*/
+.single-pokemon {
+	.title-wrapper {
+		.actions {
+			max-width: 500px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: center;
+
+			form {
+				+ form {
+					margin-left: 2rem;
+				}
+			}
+		}
+	}
+}
+
+/*
+/* Tablet Styles (up to 768px)
+/*_______________________________________________________*/
+@media screen and (max-width: 768px) {
+
+}
+
+/*
+/* Mobile Styles (maximum of 320px)
+/*_______________________________________________________*/
+@media screen and (max-width: 320px) {
+
+}

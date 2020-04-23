@@ -1,5 +1,9 @@
 <select name="<%= name %>" id="<%= name %>">
 	<% for(var i=0;i < options.length;i++) { %>
-		<option value="<%= options[i] %>"><%= options[i] %></option>
+		<% if(options[i] == value) { %>
+			<option selected value="<%= options[i] %>"><%= options[i] %></option>
+		<% } else { %>
+			<option value="<%= options[i] %>"><%= options[i] %></option>
+		<% } %>
 	<% } %>
 </select>

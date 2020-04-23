@@ -1,6 +1,16 @@
-<%- include('./includes/head.ejs') %>
+<%- include('./includes/head.ejs', { bodyClass: "single-pokemon" }) %>
 
-<h1><%= pokemon.pokemon %></h1>
+<div class="title-wrapper">
+	<h1><%= pokemon.pokemon %></h1>
+	<div class="actions">
+		<a href="/edit-pokemon?id=<%= pokemon.number %>" class="btn">Edit pokemon</a>
+
+		<form action="/delete-pokemon" method="POST">
+			<button type="submit" class="btn">Delete pokemon</button>
+			<input name="pokemon" type="hidden" value="<%= pokemon.number %>">
+		</form>
+	</div>
+</div>
 
 
 

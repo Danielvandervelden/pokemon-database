@@ -1,12 +1,14 @@
+const Pokemon = require('../models/pokemon');
+
 exports.getIndex = (req, res, next) => {
-	res.render('index', {
-		pageTitle: "Index",
-		path: '/',
-		types: ["Normal", "Fire", "Fighting", "Water", "Flying", "Grass"," Poison", "Electric", "Ground", "Psychic", "Rock", "Ice",
-				"Bug", "Dragon", "Ghost", "Dark", "Steel", "Fairy"],
-		eggGroups: ["", "Monster", "Human-like", "Water 1", "Water 2", "Water 3", "Bug", "Mineral", "Flying", "Amorphous", "Field", "Fairy",
-					"Ditto", "Grass", "Dragon", "No Eggs Discovered", "Gender Uknown"]
-	})
+	Pokemon.findAll()
+		.then(pokemons => {
+			res.render('index.ejs', {
+				pageTitle: "Pokemon",
+				path: "/",
+				pokemons: pokemons
+			})
+		})
 }
 
 exports.get404 = (req, res, next) => {

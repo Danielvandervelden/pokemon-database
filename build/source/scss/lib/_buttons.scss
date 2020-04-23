@@ -10,6 +10,12 @@
 	position: relative;
 	display: inline-block;
 	cursor: pointer;
+	line-height: inherit;
+	font-size: 1.6rem;
+
+	&:visited {
+		color: #FFF;
+	}
 
 	&:hover {
 		background-color: darken($color3, 10%);
